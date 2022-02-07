@@ -1,0 +1,12 @@
+# Run the webhook (the client that sends a POST to our webhook endpoint)
+# at localhost:5000/webhook
+# Remember to start the server first
+python webhook.py 
+
+# Simple curl test
+curl -X POST localhost:5000/webhook
+
+# Simple curl test with data
+curl -X POST http://localhost:5000/webhook \
+   -H 'Content-Type: application/json' \
+   -d '{"login":"my_login","password":"my_password"}'
